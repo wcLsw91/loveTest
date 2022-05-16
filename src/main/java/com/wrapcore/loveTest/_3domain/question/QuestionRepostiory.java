@@ -1,4 +1,7 @@
 package com.wrapcore.loveTest._3domain.question;
 
-public class QuestionRepostiory {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface QuestionRepostiory extends JpaRepository<Question, Long> {
+
 }
