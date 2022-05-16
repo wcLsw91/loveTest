@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.RequiredArgsConstructor;
 
+import lombok.RequiredArgsConstructor;
+
 @Controller
 public class HomeController {
 
