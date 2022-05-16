@@ -1,5 +1,5 @@
 package com.wrapcore.loveTest;
 
 public class SsTest {
-//test
+//test 왜안되징
 }
