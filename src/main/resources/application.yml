@@ -1,0 +1,18 @@
+server:
+    address: localhost
+    port: 8080
+
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/lovetest?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+        username: root
+        password: mysql
+
+jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect  # JPA ?????? ??? (InnoDB)
+    open-in-view: false
+    show-sql: true
+    hibernate:
+        format_sql: true
+        ddl-auto: update  # none, update, create, create-drop, validate
