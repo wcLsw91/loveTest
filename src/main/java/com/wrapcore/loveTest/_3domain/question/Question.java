@@ -10,7 +10,7 @@ import javax.persistence.*;
 import org.springframework.web.multipart.MultipartFile;
 
 @Entity
-@Getter @Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "question_table")
