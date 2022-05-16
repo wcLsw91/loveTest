@@ -9,11 +9,23 @@ spring:
         username: wc_lsw91
         password: foqzhdj91
 
-jpa:
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect  # JPA ?????? ??? (InnoDB)
-    open-in-view: false
-    show-sql: true
-    hibernate:
-        format_sql: true
-        ddl-auto: update  # none, update, create, create-drop, validate
-#ee
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        open-in-view: false
+        show-sql: true
+        hibernate:
+            ddl-auto: update  # none, update, create, create-drop, validate
+            use-new-id-generator-mappings: false
+        properties:
+            hibernate:
+                format_sql: true
+
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG
+                type:
+                    descriptor:
+                        sql:
+                            BasicBinder: TRACE
