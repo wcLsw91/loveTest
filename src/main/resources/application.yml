@@ -5,7 +5,7 @@ server:
 spring:
    datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://wc-lsw91.csovxq9urzp4.us-west-2.rds.amazonaws.com:3306/loveTest?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+      url: jdbc:mysql://localhost:3306/loveTest?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
       username: wc_lsw91
       password: foqzhdj91
 

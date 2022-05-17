@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import lombok.RequiredArgsConstructor;
 
 @Controller
-public class MainController {
+public class HomeController {
 
     @GetMapping("/")
     @ResponseBody
