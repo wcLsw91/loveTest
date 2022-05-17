@@ -1,31 +1,35 @@
 server:
-    address: localhost
-    port: 8080
+   address: localhost
+   port: 8080
 
 spring:
-    datasource:
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://wc-lsw91.csovxq9urzp4.us-west-2.rds.amazonaws.com:3306/loveTest?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-        username: wc_lsw91
-        password: foqzhdj91
+   datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://wc-lsw91.csovxq9urzp4.us-west-2.rds.amazonaws.com:3306/loveTest?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+      username: wc_lsw91
+      password: foqzhdj91
 
-    jpa:
-        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-        open-in-view: false
-        show-sql: true
-        hibernate:
-            ddl-auto: update  # none, update, create, create-drop, validate
-            use-new-id-generator-mappings: false
-        properties:
-            hibernate:
-                format_sql: true
+   jpa:
+      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+      open-in-view: false
+      show-sql: true
+      hibernate:
+         ddl-auto: update  # none, update, create, create-drop, validate
+         use-new-id-generator-mappings: false
+      properties:
+         hibernate:
+            format_sql: true
+
+   devtools:
+      livereload:
+         enabled: true
 
 logging:
-    level:
-        org:
-            hibernate:
-                SQL: DEBUG
-                type:
-                    descriptor:
-                        sql:
-                            BasicBinder: TRACE
+   level:
+      org:
+         hibernate:
+            SQL: DEBUG
+            type:
+               descriptor:
+                  sql:
+                     BasicBinder: TRACE
