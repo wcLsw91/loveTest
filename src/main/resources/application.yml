@@ -6,8 +6,8 @@ spring:
    datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/loveTest?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-      username: wc_lsw91
-      password: foqzhdj91
+      username: root
+      password: mysql
 
    jpa:
       database-platform: org.hibernate.dialect.MySQL5InnoDBDialect

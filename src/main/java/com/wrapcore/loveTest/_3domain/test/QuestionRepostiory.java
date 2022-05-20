@@ -1,4 +1,4 @@
-package com.wrapcore.loveTest._3domain.question;
+package com.wrapcore.loveTest._3domain.test;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
