@@ -44,7 +44,6 @@ public class Question {
     private Integer answer;
 
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
-    @Column(nullable = false)
     private List<Choice> choices = new ArrayList<>();
 
 }

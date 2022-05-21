@@ -19,7 +19,6 @@ public class CreateQuestion {
     @Setter
     @AllArgsConstructor
     @NoArgsConstructor
-    @ToString
     @Builder
     public static class Request_DTO {
         @NotNull

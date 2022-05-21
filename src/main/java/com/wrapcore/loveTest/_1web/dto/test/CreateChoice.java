@@ -11,15 +11,12 @@ package com.wrapcore.loveTest._1web.dto.test;/*
 import com.sun.istack.NotNull;
 import lombok.*;
 
-import java.util.List;
-
 public class CreateChoice {
 
     @Getter
     @Setter
     @AllArgsConstructor
     @NoArgsConstructor
-    @ToString
     @Builder
     public static class Request_DTO {
         @NotNull

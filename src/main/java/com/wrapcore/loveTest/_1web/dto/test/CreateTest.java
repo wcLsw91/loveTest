@@ -21,7 +21,6 @@ public class CreateTest {
     @AllArgsConstructor
     @NoArgsConstructor
     @Builder
-    @ToString
     public static class Request_DTO {
         @NotNull
         private String title;
@@ -41,7 +40,6 @@ public class CreateTest {
     @AllArgsConstructor
     @NoArgsConstructor
     @Builder
-    @ToString
     public static class Response_DTO {
         private String title;
         private String description;
