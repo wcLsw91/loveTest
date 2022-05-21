@@ -1,5 +1,8 @@
 <template>
-  <Tutorial/>
+  <!--  <Tutorial/>-->
+  <form name="makeQuestion" action="">
+
+  </form>
 </template>
 
 <script>

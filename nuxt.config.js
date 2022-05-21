@@ -31,11 +31,31 @@ export default {
   buildModules: [
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+  /*
+   ** Nuxt.js modules
+   */
+  modules: [
+    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/axios'
+  ],
+  /*
+   ** Axios module configuration
+   ** See https://axios.nuxtjs.org/options
+   */
+  axios: {
+    proxy: process.env.NODE_ENV !== 'production',
+    baseURL: '/',
+    debug: false
+  },
+  proxy: {
+    '/api': {
+      target: process.env.API_HOST || 'http://localhost:8080',
+      pathRewrite: {
+        '^/api': '/api'
+      }
+    }
+  },
 }
