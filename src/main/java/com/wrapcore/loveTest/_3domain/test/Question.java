@@ -8,9 +8,9 @@ package com.wrapcore.loveTest._3domain.test;/*
  * 2022-05-18_오후 11:32	    sp91l				최초생성
  * */
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -20,6 +20,7 @@ import java.util.List;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Getter
+@Setter
 @NoArgsConstructor
 @Table(name = "question")
 public class Question {

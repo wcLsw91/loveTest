@@ -1,8 +1,8 @@
 package com.wrapcore.loveTest._3domain.test;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -15,6 +15,7 @@ import java.util.List;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Getter
+@Setter
 @NoArgsConstructor
 @Table(name = "test")
 public class Test {
@@ -33,7 +34,7 @@ public class Test {
 //    @Column(nullable = false)
 //    private Long image_id; // 썸네일 이미지 id
 
-    @Column(nullable = false)
+    @Column(length = 15, nullable = false)
     private String button_text; // 하단 버튼명
 
     @CreatedDate
