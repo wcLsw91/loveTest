@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'front_ssr',
+    title: 'front_nuxt',
     htmlAttrs: {
       lang: 'en'
     },
@@ -39,8 +39,13 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxt/http',
+    'bootstrap-vue/nuxt'
   ],
+  bootstrapVue: {
+    icons: true
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

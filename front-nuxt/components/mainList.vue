@@ -1,10 +1,9 @@
 <template>
-<!--  <LazyMainList/>-->
   <div>
     <p v-if="$fetchState.pending">Loading....</p>
     <p v-else-if="$fetchState.error">Error while fetching mountains</p>
-    <ul class="mainList" v-else>
-      <li v-for="(mountain, index) in mainList" :key="index.id">
+    <ul v-else>
+      <li v-for="(mountain, index) in mountains" :key="index.id">
         {{ mountain.title }}
       </li>
     </ul>
@@ -13,16 +12,20 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: "mainList",
   data() {
     return {
-      mainList: []
+      mountains: []
     }
   },
   async fetch() {
-    this.mainList = await fetch(
+    this.mountains = await fetch(
       'https://api.nuxtjs.dev/mountains'
     ).then((res) => res.json())
   }
 }
 </script>
+
+<style scoped>
+
+</style>
