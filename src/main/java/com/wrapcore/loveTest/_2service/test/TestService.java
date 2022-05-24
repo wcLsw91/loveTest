@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -60,5 +61,12 @@ public class TestService {
         CreateTest.Response_DTO testResDTO = modelMapper.map(foundTest, CreateTest.Response_DTO.class);
         log.info("testResDTO: {}",gson.toJson(testResDTO));
         return testResDTO;
+    }
+
+    @Transactional
+    public List<CreateTest.Response_DTO> findTestAll(){
+        List<Test> tests = testRepostiory.findAll();
+        List<CreateTest.Response_DTO> testDTOs = tests.stream().map(test -> modelMapper.map(test,CreateTest.Response_DTO.class)).collect(Collectors.toList());
+        return testDTOs;
     }
 }

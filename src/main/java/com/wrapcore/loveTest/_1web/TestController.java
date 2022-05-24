@@ -5,6 +5,7 @@ import com.wrapcore.loveTest._1web.dto.test.CreateTest;
 import com.wrapcore.loveTest._2service.test.TestService;
 import com.wrapcore.loveTest._3domain.test.ChoiceRepostiory;
 import com.wrapcore.loveTest._3domain.test.QuestionRepostiory;
+import com.wrapcore.loveTest._3domain.test.TestRepostiory;
 import com.wrapcore.loveTest.common.api.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -31,8 +32,14 @@ public class TestController {
         return new ApiResponse(testService.readTestByTest_id(savedTestId));
     }
 
+    // Api Test용
     @GetMapping("/question/{test_id}")
     public ApiResponse questionsByTestId(@PathVariable("test_id") Long test_id) {
         return new ApiResponse(testService.readTestByTest_id(test_id));
+    }
+
+    @GetMapping("/tests")
+    public ApiResponse questions() {
+        return new ApiResponse(testService.findTestAll());
     }
 }

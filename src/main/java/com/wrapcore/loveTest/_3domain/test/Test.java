@@ -37,6 +37,9 @@ public class Test {
     @Column(length = 15, nullable = false)
     private String button_text; // 하단 버튼명
 
+//    @Column(length = 20, nullable = false)
+//    private String category; // 시험 카테고리
+
     @CreatedDate
     private LocalDateTime createdAt; // 생성시간
 
